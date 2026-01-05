@@ -1,0 +1,77 @@
+[global]
+
+#────────────────────────────
+# Identity / Class
+#────────────────────────────
+class="Dunst"
+title="Dunst"
+
+#────────────────────────────
+# Text & Markup
+#────────────────────────────
+markup = yes
+font="Mallanna 11"
+
+# Active format
+format="<b>%s</b>\n<span alpha='85%'>%b</span>"
+
+# Alternative formats (commented)
+# format="<span size='large'><b>%s</b></span>\n<span alpha='80%'>%b</span>"
+# format="<b>%s</b>\n<span alpha='70%'>%b</span>"
+
+#────────────────────────────
+# Layout & Geometry
+#────────────────────────────
+width=300
+height=180
+offset="10x10"
+gap_size=5
+padding=5
+horizontal_padding=10
+line_height=-12
+sort="update"
+
+
+#────────────────────────────
+# Frame / Borders
+#────────────────────────────
+frame_width=1
+frame_color="#ffffff33"
+corner_radius=10
+
+
+#────────────────────────────
+# Icons
+#────────────────────────────
+enable_recursive_icon_lookup=yes
+icon_position = right
+icon_corner_radius=10
+min_icon_size=32
+max_icon_size=50
+icon_path = /usr/share/icons/hicolor/48x48/apps:/usr/share/icons/gnome/48x48/apps:/usr/share/icons/Adwaita/48x48/devices:/usr/share/pixmaps
+
+
+#────────────────────────────
+# Urgency: Low
+#────────────────────────────
+[urgency_low]
+background="#32302Fdd"
+foreground="#FBF1C7"
+timeout=30
+
+#────────────────────────────
+# Urgency: Normal
+#────────────────────────────
+[urgency_normal]
+background="#504945dd"
+foreground="#FBF1C7"
+timeout=30
+
+#────────────────────────────
+# Urgency: Critical
+#────────────────────────────
+[urgency_critical]
+background="#D65D0Edd"
+foreground="#282828"
+timeout=60
+

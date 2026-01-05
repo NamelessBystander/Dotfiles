@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+		{
+		  "background": "trasparent",
+		  "foreground": "white",
+		  "style": "diamond",
+		  "template": "\n╭─",
+		  "type": "text"
+		},
+        {
+          "background": "6",
+          "foreground": "white",
+          "leading_diamond": "",
+          "style": "diamond",
+          "template": "  {{ if .WSL }}WSL at {{ end }}{{.Icon}}   ",
+          "trailing_diamond": "",
+          "type": "os"
+        },
+        {
+          "background": "transparent",
+          "forground": "trasparent",
+          "style": "diamond",
+          "template": "──",
+          "type": "text"
+        },
+        {
+          "background": "8",
+          "foreground": "white",
+          "leading_diamond": "",
+          "properties": {
+            "folder_icon": "󰝰 ",
+            "folder_separator_icon": " ",
+            "home_icon": " ",
+            "style": "agnoster"
+          },
+          "style": "diamond",
+          "trailing_diamond": "",
+          "type": "path"
+        },
+        {
+          "background": "10",
+          "foreground": "black",
+          "powerline_symbol": "",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "accordion",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350>  {{ .Staging.String }}</>{{ end }} ",
+          "type": "git"
+        },
+        {
+          "background": "9",
+          "foreground": "black",
+          "powerline_symbol": "",
+          "properties": {
+            "charging_icon": "󱐥 "
+          },
+          "style": "accordion",
+          "template": " {{ if and (not .Error) (lt .Percentage 50) }}{{ .Icon }}{{ .Percentage }} {{ end }}{{ .Error }}",
+          "type": "battery"
+        },
+        {
+          "background": "11",
+          "foreground": "black",
+          "powerline_symbol": "",
+          "properties": {
+            "precision": 0
+          },
+          "style": "accordion",
+          "template": "{{ if gt .PhysicalPercentUsed 66 }}  {{ round .PhysicalPercentUsed .Precision }}% {{ end }}",
+          "type": "sysinfo"
+        },
+        {
+          "background": "blue",
+          "foreground": "black",
+          "powerline_symbol": "",
+          "properties": {
+            "style": "round",
+            "threshold": 500
+          },
+          "style": "accordion",
+          "template": " 󱎫 {{ .FormattedMs }} ",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "forground": "white",
+          "style": "plain",
+          "template": "╰───➜",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "white",
+    "template": "\n───➜ "
+  },
+  "version": 3
+}

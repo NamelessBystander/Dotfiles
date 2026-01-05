@@ -1,0 +1,92 @@
+typeset -U path cdpath fpath manpath
+
+HISTSIZE="10000"
+SAVEHIST="1000000"
+
+HISTFILE="$HOME/.zsh_history"
+mkdir -p "$(dirname "$HISTFILE")"
+
+setopt HIST_FCNTL_LOCK
+unsetopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+unsetopt HIST_SAVE_NO_DUPS
+unsetopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY
+unsetopt EXTENDED_HISTORY
+
+
+
+			# ---------- Functions ---------- #
+			conf() {
+					local dir
+					if [ -z "$1" ]; then
+						dir="."
+					else
+						dir="$1"
+						[ ! -d "$dir" ] && echo "Directory does not exist: $dir" && return 1
+					fi
+					owner=$(stat -c %U "$dir")
+					if [ "$owner" = "root" ]; then
+						find "$dir" -type f | fzf --preview 'bat --color=always --theme Dracula {}' | xargs -I{} sudoedit {}
+					else
+						find "$dir" -type f | fzf --preview 'bat --color=always --theme Dracula {}' | xargs -I{} nvim {}
+					fi						
+			}
+
+			connect() {
+					if [ -z "$1" ]; then
+						echo device not found scanning...
+						nmcli device wifi list --rescan yes
+					else
+						nmcli device wifi list --rescan yes > /dev/null
+						sid="$1"
+						if [ -z "$2" ]; then
+							nmcli device wifi connect $sid
+						elif [ "$2" = "-a" ]; then
+							nmcli device wifi connect $sid --ask
+						fi
+					fi
+			}
+
+			export EDITOR='nvim'
+			export VISUAL='nvim'
+			eval "$(fzf --zsh)"
+			export FZF_DEFAULT_OPTS="--layout=reverse --border=bold --border=rounded --margin=3% --color=dark"
+
+
+			#tmux new -As$(pgrep -c alacritty)
+			tmux new -As$(pgrep -c kitty)
+			clear
+			fastfetch
+
+			# To get back to zsh run "zsh --norc"
+			# fish
+
+
+		
+alias -- cat='bat --color=always --theme Dracula --style=header-filename,header-filesize,grid '
+alias -- cd=z
+alias -- clock=peaclock
+alias -- cp='cp -i'
+alias -- df='df -h'
+alias -- ff='clear && fastfetch'
+alias -- la='eza -lah --icons=auto'
+alias -- ls='eza -lh --icons=auto'
+alias -- mv='mv -i'
+alias -- onedrive='rclone --vfs-cache-mode writes -v mount "onedrive": ~/OneDrive'
+alias -- rm='rm -i'
+alias -- scan='nmcli device wifi list --rescan yes'
+alias -- shutdown='shutdown now'
+alias -- tmuxa='tmux new -As$(pgrep -c alacritty)'
+alias -- tmuxc='tmux list-sessions -F "#S" | grep -v "$(tmux display-message -p -c \"$(tmux display -p '\''#{client_tty}'\'')\" '\''#S'\'')" | xargs -n1 tmux kill-session -t'
+alias -- tmuxq='tmux kill-server'
+alias -- update='sudo pacman -Syu'
+alias -- xclip='xclip -selection clipboard'
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=()
+
+eval "$(zoxide init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
+

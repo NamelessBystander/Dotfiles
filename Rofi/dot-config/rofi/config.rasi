@@ -1,0 +1,15 @@
+configuration {
+display-drun: "Open:  ";
+display-filebrowser: " ";
+display-run: " ";
+display-window: " ";
+drun-display-format: "{name}";
+font: "Maple Mono NF 10";
+location: 0;
+modi: "drun,filebrowser,window,run,combi";
+show-icons: true;
+window-format: "{w}{t}";
+xoffset: 0;
+yoffset: 0;
+}
+@theme "custom"

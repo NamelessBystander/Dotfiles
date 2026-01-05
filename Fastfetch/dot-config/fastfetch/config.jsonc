@@ -1,0 +1,106 @@
+{
+  "display": {
+    "color": {
+      "keys": "bright_cyan",
+      "output": "#F8F8F2"
+    },
+    "separator": "    ",
+    "showErrors": true,
+    "size": {
+      "binaryPrefix": "si"
+    }
+  },
+  "logo": {
+    "color": {
+      "1": "blue",
+      "2": "blue"
+    },
+    "padding": {
+      "left": 1,
+      "right": 1,
+      "top": 1
+    },
+  },
+  "modules": [
+    {
+      "format": "┏━━━━━━━━━━━━━━━━ {#bright_blue} OS Infomation  {#97}━━━━━━━━━━━━━━━━┓",
+      "type": "title"
+    },
+    {
+      "format": "{pretty-name}",
+      "key": "    ",
+      "type": "os"
+    },
+    {
+      "format": "{1}",
+      "key": "    ",
+      "type": "wm"
+    },
+    {
+      "format": "{pretty-name} {#2}[{version}]",
+      "key": "    ",
+      "type": "shell"
+    },
+    {
+      "format": "{pacman} {#2}[pacman]",
+      "key": "  󰏖  ",
+      "type": "packages"
+    },
+    "break",
+    {
+      "format": "┣━━━━━━━━━━━━━ {#91} Hardware Infomation  {#97}━━━━━━━━━━━━━┫",
+      "type": "title"
+    },
+    {
+      "format": "{1}",
+      "key": "    ",
+      "type": "cpu"
+    },
+    {
+      "format": "{name}",
+      "hideType": "integrated",
+      "key": "  󰍹  ",
+      "type": "gpu"
+    },
+    {
+      "format": "{size-used} / {size-total} {#2}[{size-percentage}{#2}]",
+      "key": "    ",
+      "type": "disk"
+    },
+    {
+      "format": "{1} / {2} {#2}[{3}{#2}]",
+      "key": "    ",
+      "type": "memory"
+    },
+    "break",
+    {
+      "format": "┣━━━━━━━━━━━━━ {#92} Updating Infomation  {#97}━━━━━━━━━━━━━┫",
+      "type": "title"
+    },
+    {
+      "format": "{hour-pretty}:{minute-pretty} {#2}[{weekday}]",
+      "key": "    ",
+      "type": "datetime"
+    },
+    {
+      "format": "{?days}{days}d {?}{hours}h {minutes}m",
+      "key": "    ",
+      "type": "uptime"
+    },
+    {
+      "format": "{1} {#2}[{3}]",
+      "key": "    ",
+      "type": "media"
+    },
+    {
+      "format": "{capacity} {#2}[{status}]",
+      "key": "    ",
+      "type": "battery"
+    },
+    "break",
+    {
+      "format": "{#30}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}       {#90}  {#91}  {#92}  {#93}  {#94}  {#95}  {#96}  {#97} ",
+      "type": "custom"
+    }
+  ]
+}
