@@ -62,7 +62,7 @@
             "charging_icon": "󱐥 "
           },
           "style": "accordion",
-          "template": " {{ if and (not .Error) (lt .Percentage 50) }}{{ .Icon }}{{ .Percentage }} {{ end }}{{ .Error }}",
+          "template": " {{ if and (not .Error) (lt .Percentage 15) }}{{ .Icon }}{{ .Percentage }} {{ end }}{{ .Error }}",
           "type": "battery"
         },
         {

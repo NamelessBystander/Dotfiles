@@ -22,7 +22,7 @@ format="<b>%s</b>\n<span alpha='85%%'>%b</span>"
 # Layout & Geometry
 #────────────────────────────
 width=300
-height=180
+height=(0,180)
 offset=(10, 10)
 gap_size=5
 padding=5

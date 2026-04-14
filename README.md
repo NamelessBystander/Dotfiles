@@ -1,0 +1,3 @@
+## Usage
+To use this with stow, have this repo copied into the home directory. To apply any config, run `stow /Dir` where "/Dir" is the directory with the name of the config you want to apply. This can be done with multiple at once by listing all the directories with spaces in between.
+There is a folder called .stowrc which has the basic flags that are run every time `stow` is executed. The first makes it so stow is linking to the home directory; this is set to be /home/aston but if the username is changed this will need to be manually edited. The second line makes it so /dot-config is linked as /.config; this makes it easier to handle the dotfiles in this directory without having to invoke the -a flag on every ls.
