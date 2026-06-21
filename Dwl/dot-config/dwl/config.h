@@ -16,6 +16,7 @@ static const float urgentcolor[]           = COLOR(0xff0000ff);
 static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f}; /* You can also use glsl colors */
 
 /* tagging - TAGCOUNT must be no greater than 31 */
+
 #define TAGCOUNT (9)
 
 /* logging */
@@ -59,6 +60,7 @@ static const int tap_to_click = 1;
 static const int tap_and_drag = 1;
 static const int drag_lock = 1;
 static const int natural_scrolling = 0;
+static const double scroll_factor = 0.2;
 static const int disable_while_typing = 1;
 static const int left_handed = 0;
 static const int middle_button_emulation = 0;
@@ -88,7 +90,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* commands */
 static const char *termcmd[] = { "kitty", NULL };
 static const char *menucmd[] = { "rofi", "-show", "drun"};
-static const char *browsercmd[] = { "firefox", NULL };
+static const char *browsercmd[] = { "helium-browser", NULL };
 static const char *discordcmd[] = { "discord", NULL };
 
 static const Key keys[] = {
