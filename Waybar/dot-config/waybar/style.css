@@ -1,0 +1,39 @@
+window#waybar {
+    background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent dark grey */
+}
+#battery {
+    background-color: rgba(40,40,40,1); /* Dark Slate */
+    color: #EBDBB2;                         /* Off-white text */
+    padding: 0 15px;
+    margin: 0px 10px;                       /* Gives it a floating look */
+    border-radius: 15px 0px 0px 0px;
+    border-width: 2px 0px 0px 2px;
+	border-style: solid;
+	border-color: rgba(168,153,132,0.1);
+
+}
+
+/* When the battery is charging */
+#battery.charging {
+    color: #689D6A; /* Green */
+}
+
+/* Warning state (30% and below) */
+#battery.warning {
+    color: #D79921; /* Yellow/Orange */
+}
+
+/* Critical state (15% and below) */
+#battery.critical:not(.charging) {
+    color: #CC241D;
+}
+
+#clock {
+    background-color: rgba(40,40,40,1); /* Dark Slate */
+    color: #EBDBB2;                         /* Off-white text */
+    padding: 0 15px;
+    border-width: 2px 0px 0px 0px;
+	border-style: solid;
+	border-color: rgba(168,153,132,0.1);
+}
+
