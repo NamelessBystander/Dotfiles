@@ -1,0 +1,22 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "exclusive": false, // Prevents windows from being pushed away
+    "modules-right": ["battery", "clock"],
+	"passthrough": true,
+	"reload_style_on_change": true,
+	"spacing": -10,
+
+	"battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+		"states": {
+			"warning": 30,
+			"critical": 15
+		}
+    },
+
+	"clock": {
+		"format": "{:%I:%M}"
+	}
+}
