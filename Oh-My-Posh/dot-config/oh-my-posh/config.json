@@ -12,8 +12,8 @@
 		  "type": "text"
 		},
         {
-          "background": "6",
-          "foreground": "white",
+          "background": "2",
+          "foreground": "0",
           "leading_diamond": "",
           "style": "diamond",
           "template": "  {{ if .WSL }}WSL at {{ end }}{{.Icon}}   ",

@@ -17,7 +17,7 @@ if status is-interactive
 
 # Alias'
 #---------------# 
-	alias -- cat='bat --color=always --theme Gruvbox --style=header-filename,header-filesize,grid '
+	alias -- cat='bat --color=always --theme ansi --style=plain '
 	alias -- cd=z
 	alias -- cp='cp -i'
 	alias -- ff='clear && fastfetch'

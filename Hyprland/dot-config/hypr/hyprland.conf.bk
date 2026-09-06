@@ -25,7 +25,7 @@ source = ~/.config/hypr/animations.conf
 
 # See https://wiki.hypr.land/Configuring/Monitors/
 
-monitor=,preferred,auto,1.5,bitdepth, 10,cm, srgb
+monitor=,preferred,auto,1.5
 
 
 

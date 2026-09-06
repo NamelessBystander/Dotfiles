@@ -17,4 +17,4 @@ vim.opt.shiftwidth = 4
 
 vim.o.scrolloff = 8
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "#1D2021" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "#191724" })

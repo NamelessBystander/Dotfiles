@@ -35,9 +35,9 @@ return {
 ─────────────────────────────────────────────────
     ]]
 
-			vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#ff5555", bg = "NONE" })
-			vim.api.nvim_set_hl(0, "AlphaButtons", { fg = "#F8F8F2", bg = "NONE" })
-			vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = "#BD93F9", bg = "NONE" })
+			vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#eb6f92", bg = "NONE" })
+			vim.api.nvim_set_hl(0, "AlphaButtons", { fg = "#e0def4", bg = "NONE" })
+			vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = "#c4a7e7", bg = "NONE" })
 
 			dashboard.section.header.val = vim.split(logo, "\n")
 			-- stylua: ignore
