@@ -17,7 +17,7 @@ if status is-interactive
 
 # Alias'
 #---------------# 
-	alias -- cat='bat --color=always --theme Gruvbox --style=header-filename,header-filesize,grid '
+	alias -- cat='bat --color=always --theme ansi --style=plain '
 	alias -- cd=z
 	alias -- cp='cp -i'
 	alias -- ff='clear && fastfetch'
@@ -54,8 +54,8 @@ set -g fish_complete_path
 
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
-set -gx  WAYLAND_DISPLAY wayland-1
-set -gx HYPRLAND_INSTANCE_SIGNATURE 39d7e209c79d451efab1b21151d5938289da838d_1779147203_1738033623
+#set -gx  WAYLAND_DISPLAY wayland-1
+#set -gx HYPRLAND_INSTANCE_SIGNATURE 39d7e209c79d451efab1b21151d5938289da838d_1779147203_1738033623
 
 
 

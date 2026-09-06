@@ -1,0 +1,171 @@
+* {
+//Dracula
+//------------------
+//bg-colour: #282a36;
+//br-colour: #bd93f9;
+//clear-colour: #00000000;
+//fg-colour: #f8f8f2;
+//pr-colour: #f8f8f2;
+//sbg-colour: #6272a4;
+//sfg-colour: #282a36;
+//tbg-colour: #44475Aee;
+//tbg2-colour: #44475A99;
+//------------------
+
+//Gruvbox
+//------------------
+bg-colour: #282828;
+br-colour: #689D6A;
+clear-colour: #00000000;
+fg-colour: #FBF1C7;
+pr-colour: #FBF1C7;
+sbg-colour: #3C3836;
+sfg-colour: #1D2021;
+tbg-colour: #282828ee;
+tbg2-colour: #28282899;
+tbr-colour: #D65D0E;
+br2-colour: #689D6A;
+//------------------
+}
+
+dummyd {
+background-color: @br2-colour;
+border-radius: 0em 0em 1em 1em;
+padding: 0em;
+spacing: 0em;
+}
+
+dummyt {
+background-color: @tbg-colour;
+padding: 0em;
+}
+
+element {
+background-color: @tbg2-colour;
+border-radius: 1em;
+cursor: pointer;
+enabled: true;
+padding: 0.4em;
+spacing: 0.5em;
+margin: -0.3em;
+text-color: @fg-colour;
+}
+
+element selected.normal {
+border: 1px;
+border-color: @tbr-colour;
+}
+
+element-icon {
+background-color: transparent;
+cursor: inherit;
+padding: 0em 0.5em 0em 0.5em;
+size: 1.5em;
+text-color: inherit;
+}
+
+element-text {
+background-color: transparent;
+cursor: inherit;
+text-color: inherit;
+vertical-align: 0.5;
+}
+
+entry {
+background-color: @clear-colour;
+enabled: true;
+padding: 1em 1em 1em 0em;
+prompt: true;
+text-color: @fg-colour;
+}
+
+error-message {
+background-color: @clear-colour;
+padding: 0.4em 0.4em 19.4em 0.4em;
+}
+
+inputbar {
+background-color: @tbg-colour;
+border: 3px;
+border-color: @br2-colour;
+border-radius: 5em;
+children: [ prompt,entry ];
+enabled: true;
+padding: -0.2em;
+spacing: 0em;
+}
+
+listbox {
+background-color: @clear-colour;
+border-radius: 1em 1em 1em 1em;
+children: [ dummyt,listview,dummyb ];
+padding: 0em;
+spacing: 0em;
+}
+
+listview {
+background-color: @clear-colour;
+columns: 1;
+cursor: default;
+cycle: true;
+dynamic: true;
+enabled: true;
+expand: false;
+fixed-columns: true;
+fixed-height: true;
+layout: vertical;
+lines: 3;
+padding: 0.7em 4em;
+require-input: "false";
+reverse: false;
+scrollbar: false;
+spacing: 1em;
+text-color: @fg-colour;
+}
+
+mainbox {
+background-color: @clear-colour;
+border-radius: 0.5em;
+children: [ "inputbar","listbox" ];
+enabled: true;
+orientation: vertical;
+padding: 0.4em;
+spacing: 0em;
+}
+
+message {
+background-color: @clear-colour;
+}
+
+prompt {
+background-color: @clear-colour;
+enabled: true;
+padding: 1em 0em 1em 1em;
+text-color: @pr-colour;
+vertical-align: 0.5;
+}
+
+textbox {
+background-color: @tbg-colour;
+border: 3px;
+border-color: @tbr-colour;
+border-radius: 3em;
+horizontal-align: 0.5;
+padding: 0.3em;
+text-color: @pr-colour;
+vertical-align: 0.5;
+}
+
+window {
+background-color: @clear-colour;
+border-color: @br-colour;
+border-radius: 1em;
+cursor: default;
+enabled: true;
+fixed-height: true;
+fullscreen: false;
+height: 12em;
+padding: 0em;
+spacing: 0em;
+width: 20em;
+}

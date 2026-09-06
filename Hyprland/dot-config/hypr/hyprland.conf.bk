@@ -15,7 +15,7 @@
 # You can split this configuration into multiple files
 # Create your files separately and then link them to this file like this:
 source = ~/.config/hypr/colours/gruvbox.conf
-source = ~/.config/hypr/animations.conf
+#source = ~/.config/hypr/animations.conf
 
 
 
@@ -25,7 +25,8 @@ source = ~/.config/hypr/animations.conf
 
 # See https://wiki.hypr.land/Configuring/Monitors/
 
-monitor=,preferred,auto,1.5, 
+monitor=,preferred,auto,1.5
+
 
 
 
@@ -140,6 +141,10 @@ decoration {
 
         vibrancy = 0.1696
     }
+}
+
+animations {
+    enabled = no
 }
 
 # Ref https://wiki.hypr.land/Configuring/Workspace-Rules/
