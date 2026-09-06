@@ -29,7 +29,7 @@ local browser     = "zen-browser"
 -------------------
 
 hl.on("hyprland.start", function ()
-	hl.exec_cmd("swaybg --image ~/Dotfiles/!Storage/Wallpapers/OilPaintingWallpaper1.jpg")
+	hl.exec_cmd("swaybg --image ~/Dotfiles/!Storage/Wallpapers/MountainsWallpaper.avif")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("/usr/lib/pam_kwallet_init")
 	hl.exec_cmd("kwalletd6")
