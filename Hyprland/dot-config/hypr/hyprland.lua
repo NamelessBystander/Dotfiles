@@ -33,6 +33,7 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("/usr/lib/pam_kwallet_init")
 	hl.exec_cmd("kwalletd6")
+	hl.exec_cmd("/usr/bin/emacs --daemon")
 end)
 
 -- Look into starting some apps on a certain desktop 
@@ -185,6 +186,8 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2
 hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("xdg-open 'obsidian://open?vault=Obsidian'"))
+hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("emacsclient -c -a 'emacs'"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

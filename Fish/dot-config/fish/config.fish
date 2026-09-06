@@ -28,6 +28,7 @@ if status is-interactive
 	alias -- tmuxa='tmux new-session -A -s main'
 	alias -- tmuxq='tmux kill-server'
 	alias -- connect='nmcli device wifi list --rescan yes > /dev/null && nmcli device wifi connect'
+	alias -- emacs='emacsclient -c -a "emacs"'
 
 	abbr --add copy 'wl-copy'
 	abbr --add paste 'wl-paste'
